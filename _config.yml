@@ -18,7 +18,7 @@ title: Sandglaz Blog Archive
 description: >- # this means to ignore newlines until "baseurl:"
   An archive of the Sandglaz blog. Read posts about productivity, teamwork and building high performing teams.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "blog.sandglaz.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://blog.sandglaz.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sandglaz
 github_username:  sandglaz
 
