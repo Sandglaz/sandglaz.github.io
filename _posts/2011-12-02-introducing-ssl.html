@@ -1,0 +1,57 @@
+---
+layout: post
+title: Introducing SSL
+date: 2011-12-02 18:41:02.000000000 -05:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Sandglaz News
+tags: []
+meta:
+  blogger_blog: www.sandglaz.com
+  blogger_author: Nada Aldahleh
+  blogger_8d3a870fe9aa522f97e753cb7d463505_permalink: '30'
+  _edit_last: '2'
+  dsq_thread_id: '671923892'
+  _wp_rp_image: empty
+  _wp_rp_related_posts_query_result_cache_5: a:10:{i:0;O:8:"stdClass":2:{s:7:"post_id";s:3:"127";s:5:"score";s:18:"35.559191675451544";}i:1;O:8:"stdClass":2:{s:7:"post_id";s:2:"97";s:5:"score";s:18:"28.997369243465165";}i:2;O:8:"stdClass":2:{s:7:"post_id";s:3:"146";s:5:"score";s:18:"28.486819584676695";}i:3;O:8:"stdClass":2:{s:7:"post_id";s:3:"135";s:5:"score";s:18:"24.594999286518636";}i:4;O:8:"stdClass":2:{s:7:"post_id";s:3:"121";s:5:"score";s:18:"19.743079705942755";}i:5;O:8:"stdClass":2:{s:7:"post_id";s:2:"77";s:5:"score";s:18:"19.743079705942755";}i:6;O:8:"stdClass":2:{s:7:"post_id";s:4:"2550";s:5:"score";s:17:"18.29786669162049";}i:7;O:8:"stdClass":2:{s:7:"post_id";s:4:"2058";s:5:"score";s:18:"18.169427506104476";}i:8;O:8:"stdClass":2:{s:7:"post_id";s:3:"142";s:5:"score";s:18:"18.169427506104476";}i:9;O:8:"stdClass":2:{s:7:"post_id";s:2:"14";s:5:"score";s:18:"18.169427506104476";}}
+  _wp_rp_related_posts_query_result_cache_expiration: '1522126259'
+  _wp_rp_related_posts_query_result_cache_2: a:4:{i:0;O:8:"stdClass":2:{s:7:"post_id";s:3:"127";s:5:"score";s:17:"34.76595099860653";}i:1;O:8:"stdClass":2:{s:7:"post_id";s:2:"97";s:5:"score";s:18:"28.811493394323318";}i:2;O:8:"stdClass":2:{s:7:"post_id";s:3:"146";s:5:"score";s:17:"28.33048637010037";}i:3;O:8:"stdClass":2:{s:7:"post_id";s:3:"135";s:5:"score";s:18:"24.438666071960757";}}
+author:
+
+  
+  Nada Aldahleh
+
+
+---
+<p><i><b>Update:</b> As of Jan. 28, 2012, SSL is supported on all platforms. Please use https://www.sandglaz.com instead of https://sandglaz.com</i></p>
+<p>We're happy to announce that we now support SSL.</p>
+<p><img class="right" alt="Secure" src="{{ site.baseurl }}/assets/medium.jpeg" /></p>
+<h4>What is SSL?</h4>
+<p>SSL (Secure Sockets Layer) is the standard security technology for establishing an encrypted link between a web server and a browser. This ensures that all data passed between your browser and the server remains private and integral. SSL is an industry standard, it is the same security used by banks and payment transactions on the web. URLs that require SSL connection start with <i>https</i> instead of <i>http</i></p>
+<h4>How do I use SSL with Sandglaz</h4>
+<p>Simply access the site using <span style="text-decoration: line-through;">http<b class="solid-red">s</b>://sandglaz.com</span> http<b class="solid-red">s</b>://www.sandglaz.com</p>
+<h4>Who can use SSL?</h4>
+<p>Everyone can use SSL for sign-in, sign-up and to access other public pages on the sandglaz domain. Once you're signed-in, SSL is only offered for Infinity accounts. If you're an Infinity user you can also enforce SSL on all your communications with Sandglaz.</p>
+<h4>How do I enforce SSL on all my communications with Sandglaz?</h4>
+<p>Go to your settings. (Click on your name in the page header and then click on settings. On mobiles, click on the settings icon in the header from your grid list page). Under the "Preferences" section, check the box next to "Always Use HTTPS ". Then save changes.</p>
+<h4>Are there any disadvantages to SSL?</h4>
+<p>SSL adds a layer of encrypting and decrypting messages between your browser and the web server. This can affect performance. For this reason, we leave it up to you to decide whether or not you need SSL.</p>
+<div style="text-decoration: line-through;">
+<h4>What are the supported platforms?</h4>
+<ul>
+<li>Chrome</li>
+<li>Firefox</li>
+<li>IE8 and later on Windows Vista and higher.</li>
+<li>Safari</li>
+<li>Mobile Safari on Apple iOS 4.0 or later</li>
+<li>Android default browser on Android 3.0 or later</li>
+</ul>
+<p>IE8 on Windows XP and the default Android browser on Android 2.x do not recognize the certificate and will result in warnings. But you will be able to continue and your data will still be encrypted.</p>
+<h4>I'm a geek. Can you tell me why there are unsupported browsers?</h4>
+<p>Sandglaz is cloud-hosted and is using SNI SSL. SNI SSL is a recent, cloud-friendly approach to SSL. While currently you need one IP address per SSL certificate, which is massively restrictive in a cloud computing environment. <a href="http://en.wikipedia.org/wiki/Server_Name_Indication" target="_blank">SNI</a> is a technology that allows you to combine VirtualHosts and SSL. You can read the full list of supported platforms <a href="http://en.wikipedia.org/wiki/Server_Name_Indication#Support" target="_blank">here</a>.</p>
+</div>
+<p>&nbsp;</p>

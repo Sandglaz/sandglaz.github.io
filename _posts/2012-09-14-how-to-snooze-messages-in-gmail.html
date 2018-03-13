@@ -1,0 +1,82 @@
+---
+layout: post
+title: How to Snooze Messages in Gmail
+date: 2012-09-14 02:33:52.000000000 -04:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Productivity
+tags: []
+meta:
+  blogger_blog: www.sandglaz.com
+  blogger_author: Nada Aldahleh
+  blogger_8d3a870fe9aa522f97e753cb7d463505_permalink: '62'
+  _oembed_fa6e8493a9f3b707cc04a23694e2e4f7: <iframe width="800" height="600" src="http://www.youtube.com/embed/Aw6SWtKIZeU?feature=oembed"
+    frameborder="0" allowfullscreen></iframe>
+  _s2mail: 'yes'
+  _edit_last: '2'
+  dsq_thread_id: '843226107'
+  _oembed_7772eec5f8f4a1f14db894ab978f9726: <iframe width="800" height="600" src="http://www.youtube.com/embed/Aw6SWtKIZeU?feature=oembed"
+    frameborder="0" allowfullscreen></iframe>
+  _oembed_c5bed49f4cf42e147d7c3dcd0a2cde6b: <iframe width="640" height="480" src="http://www.youtube.com/embed/Aw6SWtKIZeU?feature=oembed"
+    frameborder="0" allowfullscreen></iframe>
+  _wp_rp_image: empty
+  _wp_rp_related_posts_query_result_cache_5: a:10:{i:0;O:8:"stdClass":2:{s:7:"post_id";s:2:"80";s:5:"score";s:18:"31.780539245058925";}i:1;O:8:"stdClass":2:{s:7:"post_id";s:3:"134";s:5:"score";s:18:"17.326783490458965";}i:2;O:8:"stdClass":2:{s:7:"post_id";s:3:"139";s:5:"score";s:18:"16.759678132207675";}i:3;O:8:"stdClass":2:{s:7:"post_id";s:3:"151";s:5:"score";s:18:"16.628880659499522";}i:4;O:8:"stdClass":2:{s:7:"post_id";s:4:"1165";s:5:"score";s:17:"16.53302076159367";}i:5;O:8:"stdClass":2:{s:7:"post_id";s:3:"464";s:5:"score";s:18:"16.531789613540987";}i:6;O:8:"stdClass":2:{s:7:"post_id";s:4:"2361";s:5:"score";s:18:"15.828180644553242";}i:7;O:8:"stdClass":2:{s:7:"post_id";s:3:"141";s:5:"score";s:18:"15.792273185095121";}i:8;O:8:"stdClass":2:{s:7:"post_id";s:2:"57";s:5:"score";s:18:"15.738026884675696";}i:9;O:8:"stdClass":2:{s:7:"post_id";s:2:"86";s:5:"score";s:18:"15.213298355677223";}}
+  _wp_rp_related_posts_query_result_cache_expiration: '1522083751'
+  _yoast_wpseo_metadesc: Do you receive email messages that you don’t want to act
+    on right away? Do you keep those messages unread? And, do you hate how it clutters
+    your inbox with too many unread messages?
+  _wp_rp_related_posts_query_result_cache_2: a:4:{i:0;O:8:"stdClass":2:{s:7:"post_id";s:2:"80";s:5:"score";s:16:"31.5893236406443";}i:1;O:8:"stdClass":2:{s:7:"post_id";s:4:"3241";s:5:"score";s:18:"25.694037792873317";}i:2;O:8:"stdClass":2:{s:7:"post_id";s:4:"2990";s:5:"score";s:18:"23.650735297852833";}i:3;O:8:"stdClass":2:{s:7:"post_id";s:4:"1165";s:5:"score";s:18:"16.947702528973824";}}
+  _oembed_time_9f8304fa4c806ffd16bbf3ce2cf11000: '1519840342'
+  _oembed_9f8304fa4c806ffd16bbf3ce2cf11000: <iframe width="640" height="480" src="https://www.youtube.com/embed/Aw6SWtKIZeU?feature=oembed"
+    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+author:
+
+  
+  Nada Aldahleh
+
+
+---
+<p><img class="right" alt="" src="{{ site.baseurl }}/assets/medium.png" /></p>
+<p>Do you receive email messages that you don't want to act on right away? Do you keep those messages unread? And, do you hate how it clutters your inbox with too many unread messages? If so, here's a quick way to take messages out of your inbox until you actually need them. No extensions or add-ons required. Completely free. Just needs a couple of minutes to set-up.</p>
+<h2>How will it work</h2>
+<p>Once you have it set up, you will be able to quickly move messages to a Snooze folder, specifying the number of days you want to snooze it. After those days have elapsed the message will come back to your inbox marked unread. For example moving a message to "Snooze 2 day" will take the message away from your inbox and bring it back in 2 days.</p>
+<h2>How to set it up</h2>
+<p>Go to <a href="https://docs.google.com" target="_blank">Google Docs</a>, and create a new spreadsheet. From the Tools menu, select Script Editor. Copy and paste the code below. And Save it. You don't need to understand it.</p>
+<pre style="border: 1px solid;">
+function getLabelName(i) {
+  return "Snooze/Snooze " + i + " days";
+}
+
+function setup() {
+  // Create the labels we’ll need for snoozing
+  GmailApp.createLabel("Snooze");
+  for (var i = 1; i &lt;= 7; ++i) {
+    GmailApp.createLabel(getLabelName(i));
+  }
+}
+
+function moveSnoozes() {
+  var oldLabel, newLabel, page;
+  for (var i = 1; i  0) {
+        if (newLabel) {
+          // Move the threads into "today’s" label
+          newLabel.addToThreads(page);
+        } else {
+          // Unless it’s time to unsnooze it
+          GmailApp.moveThreadsToInbox(page);
+          GmailApp.markThreadsUnread(page);      
+        }     
+        // Move the threads out of "yesterday’s" label
+        oldLabel.removeFromThreads(page);
+      }  
+    }
+  }
+}</pre>
+<p>From the drop down click "setup" and then hit run. This will set up the Snooze labels for you. Then go to Resources &gt; Current script's triggers. And add a new trigger. Choose moveSnoozes, Time-driven, Day-Timer. Click Save. This tells google to execute the code every day in order to move back any messages you snoozed.</p>
+<p>Here's a video that walks you through this:</p>
+<p>http://www.youtube.com/watch?v=Aw6SWtKIZeU&amp;w=420&amp;h=315</p>
+<p>Note. This post is a step-by-step simplified version of <a href="http://googleappsdeveloper.blogspot.com/2011/07/gmail-snooze-with-apps-script.html" target="_blank">Corey Goldfeder's.</a></p>
