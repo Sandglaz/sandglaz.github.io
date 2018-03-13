@@ -25,7 +25,7 @@ github_username:  sandglaz
 # Build settings
 permalink: /:title:output_ext
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 
