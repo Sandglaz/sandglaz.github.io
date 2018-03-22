@@ -23,7 +23,7 @@ twitter_username: sandglaz
 github_username:  sandglaz
 
 # Build settings
-permalink: /:title:output_ext
+permalink: /:title/
 markdown: kramdown
 theme: minima
 plugins:
