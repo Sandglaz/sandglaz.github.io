@@ -12,6 +12,6 @@ No further charges will be made to your accounts and you will have access to all
 paid features until the end of February.
 
 
-We are grateful for all the support you have given us in the last 6 years.
+We are grateful for all the support you have given us in the last 8 years.
 We gave it our all but unfortunately couldn't create a sustainable business.
 For this we are truly sorry.
